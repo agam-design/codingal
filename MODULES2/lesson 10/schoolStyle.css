@@ -22,7 +22,7 @@ a {
 
 }
 
-a:hover {
+h2:hover {
 
     color: #07706b;
 
@@ -75,7 +75,7 @@ ul li::before {
 }
 
 /* after pseudo element */
-a::after {
+h2::after {
 
     content: " 🛰️";
 
