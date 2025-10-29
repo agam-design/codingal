@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Vertical ScrollSpy Highlight Example</title>
     <meta charset="utf-8">
@@ -13,6 +14,7 @@
         body {
             position: relative;
         }
+
         /* ScrollSpy target sections */
         #section1,
         #section2,
@@ -21,18 +23,23 @@
             padding-top: 50px;
             height: 400px;
         }
+
         #section1 {
             background-color: #f39c12;
         }
+
         #section2 {
             background-color: #2ecc71;
         }
+
         #section3 {
             background-color: #3498db;
         }
+
         #section4 {
             background-color: #9b59b6;
         }
+
         /* Sidebar styles */
         #myScrollspy {
             position: fixed;
@@ -40,26 +47,31 @@
             left: 20px;
             width: 200px;
         }
+
         .nav-stacked li a {
             color: black;
             font-weight: bold;
             border-radius: 0;
         }
+
         /* Highlight the active menu item */
         .nav-stacked li.active>a {
             background-color: #333 !important;
             color: white !important;
         }
+
         .nav-stacked li>a:hover {
             background-color: #555 !important;
             color: white !important;
         }
+
         /* Add some margin so text doesn't hide under fixed nav */
         .col-sm-9 {
             margin-left: 250px;
         }
     </style>
 </head>
+
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="70">
     <div class="container-fluid">
         <div class="column">
@@ -96,4 +108,5 @@
         </div>
     </div>
 </body>
+
 </html>
