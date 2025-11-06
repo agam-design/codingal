@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sum and Trigonometric Values</title>
+</head>
+
+<body>
+   
+    <script>
+        function addNumbers(a, b) {
+            return a + b;
+        }
+        function showTrigValues(angle) {
+            // Convert degrees to radians (because Math functions use radians)
+            let radians = angle * (Math.PI / 180);
+
+            // Calculate using Math object
+            let sinValue = Math.sin(radians);
+            let cosValue = Math.cos(radians);
+            let tanValue = Math.tan(radians);
+
+            // Return the formatted result
+            return `
+        Sine(${angle}°) = ${sinValue.toFixed(4)}<br>
+        Cosine(${angle}°) = ${cosValue.toFixed(4)}<br>
+        Tangent(${angle}°) = ${tanValue.toFixed(4)}
+      `;
+        }
+
+        // Main function that runs when the button is clicked
+        function showResults() {
+            // Get the numbers from the input boxes
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+
+            // Calculate the sum using our function
+            let sum = addNumbers(num1, num2);
+
+            // Create the message
+            let message = `Sum of ${num1} and ${num2} = ${sum}<br><br>`;
+            message += showTrigValues(sum);
+
+            // Display it on the page
+            document.getElementById("output").innerHTML = message;
+        }
+    </script>
+</body>
+
+</html>

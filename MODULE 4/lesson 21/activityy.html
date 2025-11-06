@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Easy JavaScript Project</title>
+</head>
+
+<body>
+    <h2>Random Numbers, Date and Rounded Number</h2>
+
+    <button onclick="showResults()">Click to Show</button>
+
+    <p id="output"></p>
+
+    <script>
+        function showResults() {
+            let text = "";
+
+          
+            let day;
+            switch (new Date().getDay()) {
+                case 0: day = "Sunday"; break;
+                case 1: day = "Monday"; break;
+                case 2: day = "Tuesday"; break;
+                case 3: day = "Wednesday"; break;
+                case 4: day = "Thursday"; break;
+                case 5: day = "Friday"; break;
+                case 6: day = "Saturday"; break;
+            }
+            text += "Today is " + day + "<br><br>";
+
+            // 📅 Show the full current date
+            let today = new Date();
+            text += "Current Date: " + today + "<br><br>";
+
+            // 🔢 Generate 3 random numbers using a loop
+            text += "Random Numbers:<br>";
+            for (let i = 1; i <= 3; i++) {
+                let randomValue = Math.random() * 100; // random 0–100
+                text += randomValue.toFixed(2) + "<br>";
+            }
+
+            // ➕ Show an absolute and rounded number
+            let value = -25.7;
+            text += "<br>Absolute Value of " + value + " is: " + Math.abs(value) + "<br>";
+            text += "Rounded Value of " + value + " is: " + Math.round(value);
+
+            // 🖥 Display all results inside the <p> tag
+            document.getElementById("output").innerHTML = text;
+            var value = Math.abs(20);
+            document.write("absolute value is" + value + "<br>");
+            var value = Math.random();
+            document.write("random value is" + value + "<br>");
+            var value = Math.random() * 100;
+
+        }
+    </script>
+</body>
+
+</html>
