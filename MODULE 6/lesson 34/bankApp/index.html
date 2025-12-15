@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Calculator</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="script.js"></script>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Tracker App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Bank App</h1>
-   <label>Description:</label>
-   <input id="desc" type="text" placeholder="Salary,Coffee,etc.">
+    <div class="container">
+        <h1>Bank Tracker</h1>
+        <div class="balance">
+            <h2>Balance: $<span id="balance">0</span></h2>
+        </div>
 
-   <label>Amount:</label>
-   <input id="amount" type="number" placeholder="1000">
+        <div class="transaction-form">
+            <input type="text" id="description" placeholder="Description">
+            <input type="number" id="amount" placeholder="Amount">
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <button id="addBtn">Add Transaction</button>
+        </div>
 
-   <label>Type:</label>
-   <select id="type">
-    <option value="income">income</option>
-    <option value="expense">expense</option>
-   </select>
+        <h3>Transactions:</h3>
+        <ul id="transactions"></ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
+</html>
